@@ -153,4 +153,6 @@
 .main__recommend-content-left:hover,
 .main__recommend-content-right:hover{
     cursor: pointer;
+    background: rgba(238, 240, 242, 0.5);
+    border-radius: 20px;
 }
