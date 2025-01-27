@@ -96,7 +96,54 @@ document.addEventListener("DOMContentLoaded", async function () {
             `;
             productList.insertAdjacentHTML("beforeend", productHTML);
         });
+
+        // Call the loadTopContent function
+        await loadTopContent(); // Add this call
     } catch (error) {
         console.error("Error loading content:", error);
+    }
+
+    async function loadTopContent() {
+        try {
+            // Fetch the JSON file
+            const response = await fetch("top_product.json");
+            if (!response.ok) {
+                throw new Error(`Failed to fetch top_product.json: ${response.status}`);
+            }
+
+            // Parse the JSON
+            const data = await response.json();
+            console.log("Loaded top_product.json data:", data);
+
+            // Get the container element
+            const container = document.querySelector(".main__content-top-content");
+            if (!container) {
+                throw new Error("Container element with class 'main__content-top-content' not found.");
+            }
+
+            container.innerHTML = ""; // Clear existing content
+
+            // Generate HTML for each item in the JSON
+            data.forEach(item => {
+                const itemHTML = `
+                    <div class="main__content-top-content-top main__content-top-content-top-${item.index}">
+                        <div class="main__content-top-content-index main__content-top-content-index-${item.index}">${item.index}</div>
+                        <img class="main__content-top-content-img" src="${item.imgSrc}" alt="${item.name}">
+                        <div class="main__content-top-content-info">
+                            <div class="main__content-top-content-name">${item.name}</div>
+                            <div class="main__content-top-content-des">
+                                <div class="main__content-top-content-chapter">${item.chapter}</div>
+                                <div class="main__content-top-content-viewer">
+                                    <i class="fa fa-eye"></i> ${item.viewers}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML("beforeend", itemHTML);
+            });
+        } catch (error) {
+            console.error("Error loading top content:", error);
+        }
     }
 });

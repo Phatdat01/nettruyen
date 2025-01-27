@@ -213,3 +213,126 @@
     color: #c0c0c0;
     font-size: 0.9rem;
 }
+
+.main__content-history{
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.main__content-history-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.main__content-history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.main__content-history-item-content {
+    display: flex;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.main__content-history-item-img{
+    width: 60px;
+    height: 60px;
+}
+
+.main__content-history-item-info{
+    padding-left: 20px;
+}
+
+.main__content-history-item-continue{
+    color: #c0c0c0;
+    font-size: 0.9rem;
+}
+
+.main__content-history-item-action{
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.main__content-history-item-name:hover,
+.main__content-history-item-continue:hover,
+.main__content-history-item-action:hover{
+    color: var(--primary-char);
+    cursor: pointer;
+}
+
+.main__content-top-header {
+    display: flex;
+    width: 100%;
+}
+
+.main__content-top-header-month,
+.main__content-top-header-week,
+.main__content-top-header-date{
+    padding: 10px;
+    background: #ecf0f1;
+    color: #333;
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+}
+
+.main__content-top-header-month:hover,
+.main__content-top-header-week:hover,
+.main__content-top-header-date:hover{
+    cursor: pointer;
+    border-top: 2px solid #721799;
+}
+
+.main__content-top-header-active{
+    border-top: 2px solid #721799;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    background: #f9f9f9;
+    color: var(--black-color);
+}
+
+.main__content-top-content-index {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b3b3b;
+    font-size: 1.2rem;
+}
+
+.main__content-top-content-index-1{
+    color: #3498db;
+}
+
+.main__content-top-content-index-2{
+    color: #27ae60;
+}
+
+.main__content-top-content-index-3{
+    color: #d35400;
+}
+
+.main__content-top-content-top{
+    display: flex;
+    padding-top: 20px;
+}
+
+.main__content-top-content-img{
+    width: 50px;
+    height: 50px;
+}
+
+.main__content-top-content-info {
+    flex: 1;
+    padding-inline: 20px;
+}
+
+.main__content-top-content-des{
+    display: flex;
+    justify-content: space-between;
+}
