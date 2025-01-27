@@ -205,6 +205,10 @@
     color: var(--black-color);
 }
 
+.main__detail-previous-info:hover{
+    color: var(--primary-char);
+}
+
 .main__detail-previous-datepost{
     color: #c0c0c0;
     font-size: 0.9rem;
