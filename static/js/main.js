@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             recommendData.forEach(item => {
                 const anchor = document.createElement("a");
                 anchor.className = "main__recommend-content-item";
-                anchor.href = "/nettruyen/ban-than-khac-gioi-cua-nam-chinh.html";
+                anchor.href = "nettruyen/ban-than-khac-gioi-cua-nam-chinh.html";
 
                 const img = document.createElement("img");
                 img.className = "main__recommend-content-img";
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             productData.forEach(product => {
                 const productHTML = `
                     <div class="col-sm-3 main__product">
-                        <a class="main__item" href="/nettruyen/ban-than-khac-gioi-cua-nam-chinh.html">
+                        <a class="main__item" href="nettruyen/ban-than-khac-gioi-cua-nam-chinh.html">
                             <img class="main__item-img" src="${product.image}" alt="image">
                             <div class="main__item-info">
                                 <i class="fa fa-eye"></i>
